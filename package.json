@@ -1,10 +1,14 @@
 {
+  "homepage": "http://{Lagsubham}.github.io/{weatherapp}",
+
   "name": "weatherapp",
   "version": "1.0.0",
   "description": "weather_app",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "watch": "webpack --watch",
     "build": "webpack"
   },
@@ -19,6 +23,7 @@
   "license": "ISC",
   "devDependencies": {
     "eslint": "^8.43.0",
+    "gh-pages": "^5.0.0",
     "webpack": "^5.88.0",
     "webpack-cli": "^5.1.4"
   }
